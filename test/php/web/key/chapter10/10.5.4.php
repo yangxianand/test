@@ -1,0 +1,16 @@
+<?php
+class People
+{
+    public static $name = 'People';
+    public static function showName()
+    {
+        echo self::$name;		// ¾²Ì¬°ó¶¨
+        echo static::$name;		// ¾²Ì¬ÑÓ³Ù°ó¶¨
+    }
+}
+class Man extends People
+{
+    public static $name = 'Man';
+}
+People::showName();				// People People
+Man::showName();				// People Man
