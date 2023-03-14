@@ -7,7 +7,7 @@
     </view>
   </view>
 
-  <!-- --------轮播------------ -->
+  <!-- --------轮播-123----------- -->
   <view class="haibao">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}">
