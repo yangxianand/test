@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/category",
+    "pages/shoppingcart/shoppingcart",
+    "pages/me/me",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#009966",
+    "navigationBarTitleText": "莫凡商场",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#009966",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "color": "#999",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "pages/images/images/bar/home-1.png",
+      "selectedIconPath": "pages/images/images/bar/home-0.png"
+    },
+    {
+      "pagePath": "pages/category/category",
+      "text": "分类",
+      "iconPath": "pages/images/images/bar/category-1.png",
+      "selectedIconPath": "pages/images/images/bar/category-0.png"
+    },
+    {
+      "pagePath": "pages/shoppingcart/shoppingcart",
+      "text": "购物车",
+      "iconPath": "pages/images/images/bar/cart-1.png",
+      "selectedIconPath": "pages/images/images/bar/cart-0.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "pages/images/images/bar/me-1.png",
+      "selectedIconPath": "pages/images/images/bar/me-0.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
