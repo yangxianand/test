@@ -1,0 +1,7 @@
+<template name="user">
+  <view>
+    <view>名字={{user.name}}</view>
+    <view>年龄={{user.age}}</view>
+    <view>性别={{user.sex}}</view>
+  </view>
+</template>

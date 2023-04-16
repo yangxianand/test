@@ -1,0 +1,82 @@
+<view class="content">
+  <view class="hr"></view>
+  <view class="order">
+    <view class='title'>
+      <text>订单编号：{{orderDetail.id}}</text>
+      <text class="orderStatus" wx:if="{{orderDetail.orderStatus == 1}}">待付款</text>
+      <text class="orderStatus" wx:elif="{{orderDetail.orderStatus == 1}}">待发货</text>
+      <text class="orderStatus" wx:elif="{{orderDetail.orderStatus == 2}}">待收货</text>
+      <text class="orderStatus" wx:elif="{{orderDetail.orderStatus == 3}}">交易成功</text>
+      <text class="orderStatus" wx:elif="{{orderDetail.orderStatus == 4}}">退款</text>
+      <text class="orderStatus" wx:elif="{{orderDetail.orderStatus == 5}}">交易关闭</text>
+    </view>
+    <view class="line"></view>
+    <view class='item'>
+      <text>商品单价</text>
+      <text class="orderStatus">￥ {{goodsDetail.goodsPrice}}</text>
+    </view>
+    <view class='item'>
+      <text>商品数量</text>
+      <text class="orderStatus"> x {{num}}</text>
+    </view>
+    <view class='item'>
+      <text>运费（快递）</text>
+      <text class="orderStatus">￥ 0.00</text>
+    </view>
+    <view class='item'>
+      <text>订单总价</text>
+      <text class="orderStatus">￥ {{totalPrice}}</text>
+    </view>
+    <view class='item'>
+      <text>创建时间</text>
+      <text class="orderStatus">{{orderDetail.createTime}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="address">
+    <view class="location">
+      <image src="/pages/images/icon/address.png"></image>
+    </view>
+    <view class="desc1">
+      <view>{{addresses.personName}} {{addresses.contactNumber}} </view>
+      <view>{{addresses.city}} {{addresses.address}} {{addresses.houseNumber}} </view>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="goods">
+    <view class="title">莫凡商城</view>
+    <view class="line"></view>
+    <view class="good">
+      <view class="pic">
+        <image src="{{goodsDetail.listPic}}"></image>
+      </view>
+      <view class="goodInfo">
+        <view class="name">{{goodsDetail.goodsName}}</view>
+        <view class="price">￥{{goodsDetail.goodsPrice}}
+          <text class="count">x{{num}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="tip">
+      <view class="term">
+        送货说明
+      </view>
+      <view class="desc2">
+        <view>莫凡快递</view>
+        <view>今日22:00前付款</view>
+        <view>预计明天送达</view>
+      </view>
+    </view>
+    <view class="line"></view>
+  </view>
+  <view class="hr"></view>
+  <block wx:if="{{orderDetail.payStatus==0}}">
+    <view class="bottom">
+      <view class="intocart">
+        <text>总额（含运费）：<text class="total">￥{{totalPrice}}</text></text>
+      </view>
+      <view class="buy" bindtap="buy">去付款</view>
+    </view>
+  </block>
+</view>
